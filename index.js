@@ -22,7 +22,7 @@ function viewCart() {
   if (cart.length !== 0) {
     for (let i = 0; i < cart.length; i++){
       if (i === cart.length -1 && cart.length > 1){
-        message += "and"
+        message += " and"
       }
      message += ` ${cart[i].itemName} at $${cart[i].itemPrice}`;
      if (i < cart.length - 1){
