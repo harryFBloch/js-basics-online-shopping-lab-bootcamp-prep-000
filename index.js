@@ -55,9 +55,12 @@ function removeFromCart(item) {
       itemIndex = i;
     }
   }
-  //check if item is present
-  //remove from cart if present
-  
+  if (isItemInCart){
+   cart.splice(itemIndex,0)
+   return cart
+  }else{
+   return "That item is not in your cart" 
+  }
 }
 
 function placeOrder(cardNumber) {
