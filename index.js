@@ -32,22 +32,32 @@ function viewCart() {
      }
     }
   }else{
-    message = "Your shopping cart is empty."
+    message = "Your shopping cart is empty.";
   }
   return message;
 }
 
 function total() {
   // write your code here
-  var total = 0
+  var total = 0;
   for (let i = 0; i < cart.length; i++) {
-    total += cart[i].itemPrice
+    total += cart[i].itemPrice;
   }
-  return total
+  return total;
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var isItemInCart = false;
+  var itemIndex = 0;
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].itemName === item) {
+      isItemInCart = true;
+      itemIndex = i;
+    }
+  }
+  //check if item is present
+  //remove from cart if present
+  
 }
 
 function placeOrder(cardNumber) {
